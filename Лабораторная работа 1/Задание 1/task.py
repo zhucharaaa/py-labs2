@@ -57,7 +57,7 @@ class Smartphone:
 class Car:
     def __init__(self, weightlifters_weight: Union[int, float], weightlifter_height: Union[int, float]):
         """
-        Создание и подготовка к работе объекта "Машина":)))
+        Создание и подготовка к работе объекта "Машина"
 
         :param weightlifters_weight: Вес штангиста
         :param weightlifter_height: Рост штангиста

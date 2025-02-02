@@ -42,14 +42,14 @@ class Smartphone:
             raise ValueError("Объем sd-карты не должен быть отрицательным")
         ...
 
-    def is_smartphone_NFC(self) -> bool:
+    def is_smartphone_nfc(self) -> bool:
         """
                Функция проверки наличия NFC в смартфоне.
                :return: Есть ли NFC в смартфоне
 
                Примеры:
                >>> iPhone = Smartphone(128, 2000)
-               >>> iPhone.is_smartphone_NFC()
+               >>> iPhone.is_smartphone_nfc()
                """
         ...
 

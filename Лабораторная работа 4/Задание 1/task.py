@@ -83,8 +83,8 @@ class Insect(Arthropod):
         super().__init__(name, paws=6, eyes=eyes)
         self.antennas = antennas
         if wings:
-            super().enable_wings()
-
+            self.enable_wings()
+            
     def __str__(self) -> str:
         wing_status = "with wings" if self._wings else "without wings"
         return f"Insect: {self.name}, {self.paws} paws, {self.eyes} eyes, {self.antennas} antennas, {wing_status}"

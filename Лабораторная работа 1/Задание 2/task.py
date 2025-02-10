@@ -1,4 +1,4 @@
-from task_1 import Smartphone, Car, Arthropods
+from task_1 import Smartphone, Machine, Arthropods
 
 if __name__ == "__main__":
     # TODO: инстанцировать все описанные классы, создав три объекта.C()
@@ -10,7 +10,7 @@ if __name__ == "__main__":
         print("Ошибка: неправильные данные")
 
     try:
-        car1 = Car("may", 210)
+        machine1 = Machine("may", 210)
     except TypeError:
         print("Ошибка: неправильные данные")
 

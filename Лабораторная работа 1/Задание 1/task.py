@@ -16,7 +16,7 @@ class Smartphone:
         if not isinstance(memory, int):
             raise TypeError("Объем памяти должно быть целым числом")
         if memory < 0:
-            raise ValueError("Объем памяти не может быть отрицательно")
+            raise ValueError("Объем памяти не может быть отрицательным")
         self.memory = memory
 
         if not isinstance(battery, (int, float)):
@@ -51,15 +51,10 @@ class Smartphone:
         >>> iPhone = Smartphone(128, 2000)
         >>> iPhone.is_smartphone_nfc()
         """
-        ...
 
 
-class Car:
-    def __init__(
-        self,
-        weightlifters_weight: Union[int, float],
-        weightlifter_height: Union[int, float],
-    ):
+class Machine:
+    def __init__(self,weightlifters_weight: Union[int, float], weightlifter_height: Union[int, float] ):
         """
         Создание и подготовка к работе объекта "Машина"
 
@@ -67,64 +62,64 @@ class Car:
         :param weightlifter_height: Рост штангиста
 
         Примеры:
-        >>> Schwarzenegger = Car(110, 185)# инициализация экземпляра класса
+        >>> Schwarzenegger = Machine(110, 185)# инициализация экземпляра класса
         """
         if not isinstance(weightlifters_weight, (int, float)):
             raise TypeError("Вес штангиста должен быть числом")
-        if weightlifters_weight < 0:
-            raise ValueError("Вес штангиста должен быть положительным числом")
+        if weightlifters_weight <= 0:
+            raise ValueError("Вес штангиста должен быть положительный числом")
         self.weightlifters_weight = weightlifters_weight
 
         if not isinstance(weightlifter_height, (int, float)):
             raise TypeError("Рост штангиста должен быть числом")
         if weightlifter_height < 0:
-            raise ValueError("Рост штангиста  не может быть отрицательным числом")
+            raise ValueError("Рост штангиста не может быть отрицательным числом")
         self.weightlifter_height = weightlifter_height
+        ...
 
-    def car_wins(self, number_wins: Union[int, float]) -> None:
+    def machine_wins(self, number_wins: Union[int, float]) -> None:
         """
-        Перезарядка оружия.
+        Победы.
         :param number_wins: Количество завоеванных побед
 
         :raise ValueError: Вызываем ошибку, если количество побед не является числом
 
         Примеры:
-        >>> Schwarzenegger = Car(110, 185)
-        >>> Schwarzenegger.car_wins(7)
+        >>> Schwarzenegger = Machine(110, 185)
+        >>> Schwarzenegger.machine_wins(7)
         """
         if not isinstance(number_wins, (int, float)):
             raise TypeError("Количество побед должно быть числом")
         if number_wins < 0:
-            raise ValueError("Количество побед не может быть отрицательно")
+            raise ValueError("Количество побед не может быть отрицательным")
         ...
 
     def weight_bench(self, number_kg: Union[int, float]) -> None:
         """
-        Перезарядка оружия.
+        Вес штанги.
         :param number_kg: Вес штанги на жиме лежа
 
         :raise ValueError: Вызываем ошибку, если Вес штанги не является числом
 
         Примеры:
-        >>> Schwarzenegger = Car(110, 185)
+        >>> Schwarzenegger = Machine(110, 185)
         >>> Schwarzenegger.weight_bench(227)
         """
         if not isinstance(number_kg, (int, float)):
             raise TypeError("Вес штанги должен быть числом")
         if number_kg < 0:
-            raise ValueError("Вес штанги не может быть отрицательно")
+            raise ValueError("Вес штанги не может быть отрицательным")
         ...
 
-    def is_car_use_doping(self) -> bool:
+    def is_machine_use_doping(self) -> bool:
         """
         Функция которая проверяет использовал ли штангист допинг.
         :return: использует ли штангист допинг
 
         Примеры:
-        >>> Schwarzenegger = Car(110, 185)
-        >>> Schwarzenegger.is_car_use_doping()
+        >>> Schwarzenegger = Machine(110, 185)
+        >>> Schwarzenegger.is_machine_use_doping()
         """
-        ...
 
 
 class Arthropods:
@@ -132,8 +127,8 @@ class Arthropods:
         """
         Создание и подготовка к работе объекта "Членистоногие"
 
-        :param paws: Количество лап у насекомого
-        :param eyes: Количество глаз у насекомого
+        :param paws: Количество лап у членистоногого
+        :param eyes: Количество глаз у членистоногого
 
         Примеры:
         >>> spider = Arthropods(8, 6)  # инициализация экземпляра класса
@@ -149,11 +144,12 @@ class Arthropods:
         if eyes < 0:
             raise ValueError("Количество глаз не может быть отрицательным числом")
         self.eyes = eyes
+        ...
 
     def arthropods_danger(self) -> bool:
         """
         Функция проверки наличия яда у членистоногого.
-        :return: Есть ли яд у членистоного
+        :return: Есть ли яд у членистоногого
 
         Примеры:
         >>> spider = Arthropods(8, 6)
@@ -163,7 +159,7 @@ class Arthropods:
     def arthropods_claws(self) -> bool:
         """
         Функция проверки наличия клешней у членистоногого.
-        :return: Есть ли клешни у членистоного
+        :return: Есть ли клешни у членистоногого
 
         Примеры:
         >>> spider = Arthropods(8, 6)
